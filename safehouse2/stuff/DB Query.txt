@@ -1,0 +1,47 @@
+
+
+    create table quotations(
+    qid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    customername varchar(20),
+    quotedate DATE ,
+    salesmanID INT,
+    customerEmail varchar(20),
+    accountPhone varchar(20),
+    salesPhone varchar(20),
+    ownerPhone varchar(20),
+    cstNo varchar(20),
+    tinNo varchar(20),
+    totalPrice DOUBLE,
+    installationCost DOUBLE,
+    salesTax DOUBLE,
+    discount DOUBLE,
+    quoteObj LONGTEXT);
+
+
+
+    create table product(
+    pid INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    pname varchar(25),
+    category varchar(25),
+    company varchar(25),
+    desc1 varchar(50),
+    desc2 varchar(50),
+    desc3 varchar(50),
+    desc4 varchar(50),
+    desc5 varchar(50),
+    sellingprice DOUBLE,
+    costprice DOUBLE,
+    dealerprice DOUBLE,
+    vat DOUBLE,
+    img BLOB);
+    
+    
+    
+    create table salesman(
+    sid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fname varchar(20),
+    lname varchar(20),
+    phone varchar(20),
+    email varchar(40),
+    discount DOUBLE,
+    password varchar(100));
